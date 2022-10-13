@@ -50,7 +50,8 @@ class BookStoreController extends Controller
      */
     public function update(Request $request, BookStore $bookStore)
     {
-        //
+        $bookStore->update($request->all());
+        return $bookStore;
     }
 
     /**
