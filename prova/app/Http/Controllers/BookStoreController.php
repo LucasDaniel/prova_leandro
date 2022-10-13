@@ -62,6 +62,7 @@ class BookStoreController extends Controller
      */
     public function destroy(BookStore $bookStore)
     {
-        //
+        $bookStore->delete();
+        return ['msg' => 'Removido com sucesso'];
     }
 }
