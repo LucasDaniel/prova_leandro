@@ -14,7 +14,8 @@ class BookStoreController extends Controller
      */
     public function index()
     {
-        //
+        $bookStore = BookStore::all();
+        return $bookStore;
     }
 
     /**
@@ -25,7 +26,8 @@ class BookStoreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bookStore = BookStore::create($request->all());
+        return $bookStore;
     }
 
     /**
